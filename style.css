@@ -267,3 +267,12 @@ footer {
 .btn:hover {
     background-color: #c9302c; /* ホバー時に少し暗く */
 }
+/* リンクの装飾 */
+.text-link {
+    color: #003366;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.text-link:hover {
+    color: #d9534f;
+}
