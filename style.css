@@ -276,3 +276,46 @@ footer {
 .text-link:hover {
     color: #d9534f;
 }
+
+/* --- UI/UX向上のための追加装飾 --- */
+
+/* メンバーカードとFAQにホバー時の動きをつける */
+.member-card, .faq-item {
+    transition: transform 0.3s, box-shadow 0.3s; /* 滑らかに動かす */
+}
+
+/* マウスが乗った時に少し浮き上がる */
+.member-card:hover, .faq-item:hover {
+    transform: translateY(-5px); /* 上に5px移動 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* 影を濃くする */
+}
+
+/* ボタンを押した時の「沈み込み」演出 */
+.btn:active {
+    transform: scale(0.98); /* ほんの少し小さくなる */
+}
+
+/* --- カウントダウンの特別装飾 --- */
+#hero {
+    /* グラデーション背景に変更（薄い青から白へ） */
+    background: linear-gradient(to bottom, #eef6ff, #ffffff);
+    border: 2px solid #003366; /* 枠線をしっかりつける */
+}
+
+#countdown {
+    color: #d9534f;
+    font-family: "Arial Black", sans-serif; /* 太いフォントに */
+    font-size: 2em; /* 文字を大きく */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* 少し立体的に */
+    display: block; /* 改行して目立たせる */
+    margin-top: 10px;
+}
+
+/* --- 現在のページをメニューで強調 --- */
+nav li a.active {
+    background-color: #e6f0fa; /* 背景を薄い青に */
+    color: #003366; /* 文字を濃紺に */
+    font-weight: bold; /* 文字を太く */
+    border-left: 5px solid #d9534f; /* 左に赤いラインを入れる */
+    padding-left: 15px; /* ラインの分、少し右にずらす */
+}

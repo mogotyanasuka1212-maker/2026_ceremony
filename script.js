@@ -57,3 +57,23 @@ setInterval(updateCountdown, 1000);
 
 // 画面が開いた瞬間にも一度実行しておく
 updateCountdown();
+
+// --- 3. 現在のページをハイライトする（確実版） ---
+
+// すべてのメニューリンクを取得
+const menuLinks = document.querySelectorAll('#nav-menu a');
+
+// 今のページのURL（全体）を取得
+const currentUrl = window.location.href;
+
+menuLinks.forEach(link => {
+    // リンク先のファイル名（例：access.html）を取得
+    const linkHref = link.getAttribute('href');
+
+    // 条件チェック
+    // 1. 今のURLの中に、リンク先のファイル名が含まれているか？ (例: .../access.html に access.html がある)
+    // 2. または、トップページ（URLが / で終わる）で、かつリンクが index.html か？
+    if (currentUrl.indexOf(linkHref) !== -1 || (currentUrl.endsWith('/') && linkHref === 'index.html')) {
+        link.classList.add('active');
+    }
+});
