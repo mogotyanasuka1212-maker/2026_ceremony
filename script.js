@@ -57,11 +57,3 @@ setInterval(updateCountdown, 1000);
 
 // 画面が開いた瞬間にも一度実行しておく
 updateCountdown();
-
-// （...省略...）
-
-// 1秒ごとに updateCountdown を実行して時間を更新する
-setInterval(updateCountdown, 1000);
-
-// 画面が開いた瞬間にも一度実行しておく
-updateCountdown();
