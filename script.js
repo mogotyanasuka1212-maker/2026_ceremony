@@ -37,7 +37,7 @@ function updateCountdown() {
 
     // もし時間が過ぎていたら
     if (diff < 0) {
-        countdownElement.textContent = "開催しました！";
+        countdownElement.textContent = "開催しました！ご協力ありがとうございました！";
         return;
     }
 
